@@ -13,7 +13,7 @@ const Heading = [
 
 const About = ({ aboutRef }) => {
     return (
-        <section ref={aboutRef} id="about" className="bg-white">
+        <section ref={aboutRef} id="about" className="bg-white overflow-hidden">
             <div className="px-7 py-12 md:px-10 lg:px-16 xl:px-20">
                 <div>
                     {Heading.map((data) => (
