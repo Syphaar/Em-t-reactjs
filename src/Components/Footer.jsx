@@ -2,7 +2,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { FaTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
-
+import PropTypes from "prop-types"; // Import prop-types
 
 const Heading = [
     {
@@ -12,7 +12,6 @@ const Heading = [
         description: "Have a project in mind? We’re here to help with expert advice, quality craftsmanship, and seamless execution. Contact us today to discuss your construction needs!",
     }
 ]
-
 
 const Footer = ({ contactRef }) => {
     return (
@@ -73,6 +72,13 @@ const Footer = ({ contactRef }) => {
             </div>
         </section>
     )
-}
+};
+
+Footer.propTypes = {
+    contactRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+    ]),
+};  
 
 export default Footer;

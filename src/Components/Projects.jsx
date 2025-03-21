@@ -1,18 +1,4 @@
-// const designs = [
-//     {
-//         id:1,
-//         works: "Arch building projects",
-//     },
-//     {
-//         id:2,
-//         works: "Furniture design projects",
-//     },
-//     {
-//         id:3,
-//         works: "Our Intentions Projects",
-//     },
-// ]
-
+import PropTypes from "prop-types"; // Import prop-types
 
 const Projects = ({ projectsRef }) => {
     return (
@@ -32,6 +18,14 @@ const Projects = ({ projectsRef }) => {
             </div>
         </section>
     )
-}
+};
+
+// Define prop types
+Projects.propTypes = {
+    projectsRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+    ]),
+};
 
 export default Projects;

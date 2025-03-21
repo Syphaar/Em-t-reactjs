@@ -2,7 +2,7 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { GrAnchor } from "react-icons/gr";
 import { PiHouseLineBold } from "react-icons/pi";
 import { LiaHeadsetSolid } from "react-icons/lia";
-
+import PropTypes from "prop-types"; // Import prop-types
 
 const Heading = [
     {
@@ -73,6 +73,14 @@ const Services = ({ servicesRef }) => {
             </div>
         </section>
     )
-}
+};
+
+// Define prop types
+Services.propTypes = {
+    servicesRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+    ]),
+};
 
 export default Services; 

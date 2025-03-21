@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types"; // Import prop-types
 
 const Heading = [
     {
@@ -52,6 +52,14 @@ const About = ({ aboutRef }) => {
             </div>
         </section>
     )
-}
+};
+
+// Define prop types
+About.propTypes = {
+    aboutRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+    ]),
+};
 
 export default About;
